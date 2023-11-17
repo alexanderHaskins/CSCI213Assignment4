@@ -90,20 +90,21 @@ namespace CSCI213Assignment4
         //Causes infinite loop, need to fix
         protected void deleteMemberButton_Click(object sender, EventArgs e)
         {
-            dbcon = new KarateSchoolDataContext(conn);
-            var delete=from x in dbcon.NetUsers
-                       where x.UserID== Convert.ToInt32(deleteMemberTextBox.Text)
-                       select x;
-            foreach (var x in delete) {
-                dbcon.NetUsers.DeleteOnSubmit(x);
-            }
-            dbcon.SubmitChanges();
-
             var delete2 = from x in dbcon.Members
                          where x.Member_UserID ==Convert.ToInt32(deleteMemberTextBox.Text)
                          select x;
             foreach (var x in delete2) {
                 dbcon.Members.DeleteOnSubmit(x);
+            }
+            dbcon.SubmitChanges();
+
+            dbcon = new KarateSchoolDataContext(conn);
+            var delete = from x in dbcon.NetUsers
+                         where x.UserID == Convert.ToInt32(deleteMemberTextBox.Text)
+                         select x;
+            foreach (var x in delete)
+            {
+                dbcon.NetUsers.DeleteOnSubmit(x);
             }
             dbcon.SubmitChanges();
             refresh1();
@@ -132,15 +133,6 @@ namespace CSCI213Assignment4
         //Causes infinite loop, need to fix
         protected void deleteInstructorButton_Click(object sender, EventArgs e)
         {
-            dbcon=new KarateSchoolDataContext(conn);
-            var delete = from x in dbcon.NetUsers
-                         where x.UserID == Convert.ToInt32(deleteInstructorTextBox.Text)
-                         select x;
-            foreach (var x in delete)
-            {
-                dbcon.NetUsers.DeleteOnSubmit(x);
-            }
-            dbcon.SubmitChanges();
             var delete2=from x in dbcon.Instructors
                         where x.InstructorID== Convert.ToInt32(deleteInstructorTextBox.Text)
                         select x;
@@ -149,6 +141,15 @@ namespace CSCI213Assignment4
             }
             dbcon.SubmitChanges();
             refresh2();
+            dbcon = new KarateSchoolDataContext(conn);
+            var delete = from x in dbcon.NetUsers
+                         where x.UserID == Convert.ToInt32(deleteInstructorTextBox.Text)
+                         select x;
+            foreach (var x in delete)
+            {
+                dbcon.NetUsers.DeleteOnSubmit(x);
+            }
+            dbcon.SubmitChanges();
         }
 
         protected void assignSessionButton_Click(object sender, EventArgs e)
