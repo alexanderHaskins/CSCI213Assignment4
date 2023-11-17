@@ -24,6 +24,8 @@ namespace CSCI213Assignment4
                                   select x).First();
             int myUserId = myKRMember.UserID;
 
+            
+
             Instructor myInstructor =(from x in dbcon.Instructors
                                       where x.InstructorID==myUserId
                                       select x).First();

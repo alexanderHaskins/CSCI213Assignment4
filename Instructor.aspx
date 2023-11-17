@@ -5,7 +5,7 @@
     <p>
         Hello
         <asp:Label ID="firstNameLabel" runat="server" Text="Label"></asp:Label>
-        ,<asp:Label ID="lastNameLabel" runat="server" Text="Label"></asp:Label>
+        &nbsp;<asp:Label ID="lastNameLabel" runat="server" Text="Label"></asp:Label>
     </p>
     <p>
         <asp:GridView ID="sectionAndMembersGridView" runat="server">
