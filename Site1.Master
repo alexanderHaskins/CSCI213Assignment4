@@ -22,17 +22,21 @@
     <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
+    <form id="form1" runat="server">
      <header class="page-header header container-fluid">
         <div class="overlay">
             <div class="description">
-                <h1>Karate School application</h1>
+                <h1>Karate School application&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/KarateMembers/memberpage.aspx">Members</asp:HyperLink>
+&nbsp;&nbsp;
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/KarateInstructors/Instructorpage.aspx">Instructors</asp:HyperLink>
+                </h1>
                 <!-- add hyperlinks to different pages when done-->
             </div>
 
         </div>
 
     </header>
-    <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

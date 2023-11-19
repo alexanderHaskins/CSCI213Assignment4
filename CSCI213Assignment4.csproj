@@ -120,7 +120,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="KarateInstructors\Instructorpage.aspx" />
-    <Content Include="KarateMembers\memberpage.html" />
+    <Content Include="KarateMembers\memberpage.aspx" />
     <Content Include="obj\Debug\CSCI213Assignment4.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\CSCI213Assignment4.dll" />
     <Content Include="obj\Debug\CSCI213Assignment4.pdb" />
@@ -203,6 +203,13 @@
     </Compile>
     <Compile Include="KarateInstructors\Instructorpage.aspx.designer.cs">
       <DependentUpon>Instructorpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="KarateMembers\memberpage.aspx.cs">
+      <DependentUpon>memberpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KarateMembers\memberpage.aspx.designer.cs">
+      <DependentUpon>memberpage.aspx</DependentUpon>
     </Compile>
     <Compile Include="KarateSchool.designer.cs">
       <AutoGen>True</AutoGen>
