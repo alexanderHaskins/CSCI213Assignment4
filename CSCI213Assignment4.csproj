@@ -70,7 +70,7 @@
   <ItemGroup>
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
-    <Content Include="Administrators\adminpage.aspx" />
+    <Content Include="Administrators\Administrator.aspx" />
     <Content Include="App_Data\KarateSchool.mdf" />
     <Content Include="App_Data\KarateSchool_log.ldf">
       <DependentUpon>KarateSchool.mdf</DependentUpon>
@@ -188,12 +188,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrators\adminpage.aspx.cs">
-      <DependentUpon>adminpage.aspx</DependentUpon>
+    <Compile Include="Administrators\Administrator.aspx.cs">
+      <DependentUpon>Administrator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Administrators\adminpage.aspx.designer.cs">
-      <DependentUpon>adminpage.aspx</DependentUpon>
+    <Compile Include="Administrators\Administrator.aspx.designer.cs">
+      <DependentUpon>Administrator.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

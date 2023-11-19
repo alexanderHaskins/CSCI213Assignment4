@@ -36,7 +36,7 @@
                     </strong><span class="auto-style1"><strong>&nbsp;&nbsp; </strong></span><strong>
                     <asp:HyperLink ID="HyperLink2" runat="server" CssClass="auto-style1" NavigateUrl="~/KarateInstructors/Instructorpage.aspx">Instructors</asp:HyperLink>
                     </strong><span class="auto-style1"><strong>&nbsp; </strong></span><strong>
-                    <asp:HyperLink ID="HyperLink3" runat="server" CssClass="auto-style1" NavigateUrl="~/Administrators/adminpage.aspx">Administrators</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink3" runat="server" CssClass="auto-style1" NavigateUrl="~/Administrators/Administrator.aspx">Administrators</asp:HyperLink>
                     </strong></h1>
                 <!-- add hyperlinks to different pages when done-->
             </div>
