@@ -28,6 +28,7 @@ namespace CSCI213Assignment4
             var result = from x in dbcon.Members
                          select new
                          {
+                             x.Member_UserID,
                              x.MemberFirstName,
                              x.MemberLastName,
                              x.MemberPhoneNumber,
@@ -42,6 +43,7 @@ namespace CSCI213Assignment4
             var result = from x in dbcon.Instructors
                          select new
                          {
+                             x.InstructorID,
                              x.InstructorFirstName,
                              x.InstructorLastName
                          };
@@ -87,7 +89,7 @@ namespace CSCI213Assignment4
                 
         }
 
-        //Causes infinite loop, need to fix
+        
         protected void deleteMemberButton_Click(object sender, EventArgs e)
         {
             var delete2 = from x in dbcon.Members
@@ -130,7 +132,7 @@ namespace CSCI213Assignment4
             refresh2();
         }
 
-        //Causes infinite loop, need to fix
+        
         protected void deleteInstructorButton_Click(object sender, EventArgs e)
         {
             var delete2=from x in dbcon.Instructors
