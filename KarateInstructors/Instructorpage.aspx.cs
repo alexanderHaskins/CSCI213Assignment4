@@ -17,10 +17,10 @@ namespace CSCI213Assignment4
         {
             dbcon=new KarateSchoolDataContext(conn);
 
-            // string myUserName=User.Identity.Name;
+            //string myUserName=User.Identity.Name;
             string myUserName = "user2";
             NetUser myKRMember = (from x in dbcon.NetUsers
-                                  where x.UserName == myUserName
+                                  where x.UserName.Trim() == myUserName.Trim()
                                   select x).First();
             int myUserId = myKRMember.UserID;
 
