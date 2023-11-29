@@ -19,7 +19,7 @@ namespace CSCI213Assignment4.KarateMembers
 
             if (Session.Count != 0)
             {
-                if (HttpContext.Current.Session["userType"].ToString().Trim() == "advisor")
+                if (HttpContext.Current.Session["userType"].ToString().Trim() == "instructor")
                 {
                     Session.Clear();
                     Session.RemoveAll();
